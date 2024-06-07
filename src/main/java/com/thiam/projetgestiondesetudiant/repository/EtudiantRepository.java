@@ -15,6 +15,7 @@ import java.util.List;
 public interface EtudiantRepository extends JpaRepository<Etudiant, Long> {
     public List<Etudiant> findAllByName(String name);
      Page<Etudiant> findByName(String name, Pageable pageable);
+     Page<Etudiant> findAll(Pageable pageable);
     @Query("select e from Etudiant e where e.name ILike :x%")
      Page<Etudiant> chercherEtudiant(@Param("x") String mc, Pageable pageable);
 

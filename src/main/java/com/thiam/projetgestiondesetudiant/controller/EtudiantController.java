@@ -23,6 +23,12 @@ public class EtudiantController {
         Pageable pageable = PageRequest.of(page, size);
         return etudiantService.getByName(name, pageable);
     }
+    @GetMapping("/all")
+    public Page<Etudiant> getAll(@PathVariable @RequestParam int page, @RequestParam int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return etudiantService.getAllEtudiant(pageable);
+    }
+
     @GetMapping("/list/{name}")
     public List<Etudiant> getListEtudiant(@PathVariable String name) {
         return etudiantService.getAllEtudiant(name);

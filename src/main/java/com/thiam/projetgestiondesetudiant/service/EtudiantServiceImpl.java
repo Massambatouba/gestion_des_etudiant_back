@@ -39,6 +39,11 @@ public class EtudiantServiceImpl implements EtudiantService{
         return etudiantRepository.findByName(name, pageable);
     }
 
+    @Override
+    public Page<Etudiant> getAllEtudiant(Pageable pageable) {
+        return etudiantRepository.findAll(pageable);
+    }
+
 
     @Override
     public List<Etudiant> findBetweenToDate(LocalDate d1, LocalDate d2) {
