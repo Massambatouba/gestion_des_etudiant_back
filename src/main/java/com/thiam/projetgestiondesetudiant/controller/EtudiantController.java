@@ -36,4 +36,9 @@ public class EtudiantController {
     public Etudiant editEtudiant(@RequestBody Etudiant etudiant) {
         return etudiantService.editEtudiant(etudiant);
     }
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteEtudiant(@PathVariable Long id){
+        etudiantService.deleteEtudiantById(id);
+    }
 }
