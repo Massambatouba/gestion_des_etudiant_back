@@ -19,6 +19,8 @@ public interface EtudiantService {
     public Page<Etudiant> chercherEtudiantParMotCle(String mc, Pageable pageable);
     public Page<Etudiant> getByName(String name, Pageable pageable);
 
+    public Page<Etudiant> getAllEtudiant(Pageable pageable);
+
     public List<Etudiant> findBetweenToDate(LocalDate d1, LocalDate d2);
 
     public List<Etudiant> getAllEtudiant(String name);
