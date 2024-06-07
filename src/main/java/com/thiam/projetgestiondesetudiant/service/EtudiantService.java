@@ -22,4 +22,6 @@ public interface EtudiantService {
     public List<Etudiant> findBetweenToDate(LocalDate d1, LocalDate d2);
 
     public List<Etudiant> getAllEtudiant(String name);
+
+    public void deleteEtudiantById(Long id );
 }

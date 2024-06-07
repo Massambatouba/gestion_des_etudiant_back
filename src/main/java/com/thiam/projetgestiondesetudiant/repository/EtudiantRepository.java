@@ -20,6 +20,7 @@ public interface EtudiantRepository extends JpaRepository<Etudiant, Long> {
 
     @Query("select e from Etudiant e where e.dateNaissance  > :x and e.dateNaissance < :y")
      List<Etudiant> chercherEtudiantParDate(@Param("x") LocalDate d1, @Param("y") LocalDate d2);
+    void deleteById(Long id);
 
 
 }

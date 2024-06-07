@@ -49,4 +49,9 @@ public class EtudiantServiceImpl implements EtudiantService{
     public List<Etudiant> getAllEtudiant(String name) {
         return etudiantRepository.findAllByName(name);
     }
+
+    @Override
+    public void deleteEtudiantById(Long id) {
+        etudiantRepository.deleteById(id);
+    }
 }
